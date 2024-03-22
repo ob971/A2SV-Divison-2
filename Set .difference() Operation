@@ -1,0 +1,11 @@
+# Read inputs
+_ = input()  # Discard the first input
+english_subs = set(map(int, input().split()))
+_ = input()  # Discard the third input
+french_subs = set(map(int, input().split()))
+
+# Find students subscribed to only English newspapers
+english_only_subs = english_subs.difference(french_subs)
+
+# Output the total number of students subscribed to only English newspapers
+print(len(english_only_subs))
